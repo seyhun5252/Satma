@@ -1,0 +1,53 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+<div class="wrap contact" id="contact">
+    <div class="grid grid-pad">
+        <h2>İletişim</h2>
+        <div class="col-1-2">
+            @foreach (var item in Model)
+            {
+            <div class="content address">
+                <h3>@item.ContactTitle</h3>
+                <p>@item.ContactDesciption</p>
+                <address>
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-location"></i>
+                        </div>
+                        <span>Address:</span>
+                        <p>@item.Adress</p>
+                    </div>
+
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-clock"></i>
+                        </div>
+                        <span>Work Time:</span>
+                        <p>@item.WorkTime</p>
+                    </div>
+
+                    <div>
+                        <div class="box-icon">
+                            <i class="icon-phone"></i>
+                        </div>
+                        <span>Phone:</span>
+                        <p>@item.Phone</p>
+                    </div>
+                </address>
+            </div>
+            }
+        </div>
+        
+        <div class="col-1-2 pleft-25">
+            <div class="content contact-form">
+                <form class="form">
+                    <input type="text" class="comment-name" placeholder="Name*" required>
+                    <input type="email" class="comment-email" placeholder="Email*" required>
+                    <input type="text" class="comment-subject" placeholder="Subject">
+                    <textarea class="required comment-text" placeholder="Message..." required></textarea>
+                    <input type="submit" value="Bana Mesaj Gönder" class="btn submit comment-submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

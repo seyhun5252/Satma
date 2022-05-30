@@ -1,0 +1,20 @@
+﻿@using EntityLayer.Concrete
+@model List<Home>
+<div class="parallax-section parallax1">
+    <div class="grid grid-pad">
+        <div class="col-1-1">
+            @foreach (var item in Model)
+            {
+
+              @if (item.Status == true)
+              {
+            <div class="content content-header">
+                <h2>@item.HomeTitle</h2>
+                <p>@item.HomeDescription</p>
+                <a target="_blank" class="btn btn-ghost" href="#">Daha Fazlası</a>
+            </div>
+                  }
+              }
+        </div>
+    </div>
+</div>

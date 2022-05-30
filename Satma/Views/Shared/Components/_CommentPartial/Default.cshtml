@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Comment>
+    
+    <div class="wrap services-wrap">
+        <section class="grid grid-pad">
+            <div class="col-1-1 service-box cl-client-carousel-container">
+                <div class="content">
+                    <div class="cl-client-carousel">
+                        @foreach (var item in Model)
+                        {
+                        <div class="item client-carousel-item">
+                           
+                            <div class="quotes-icon">
+                                <i class="icon-quotes-left"></i>
+                            </div>
+                            <p>@item.CommentDescription</p>
+                            <h4>@item.CommentName</h4>
+                        </div>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
